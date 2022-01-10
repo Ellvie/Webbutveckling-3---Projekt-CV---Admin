@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css/main.css" />
+    <link rel="shortcut icon" href="pics/devlielogo2.png" type="image/x-icon" />
+    <title>Admin - Portfolio</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="pics/devlielogo2.png" alt="Devlies logo." class="logoPic"
+        /></a>
+        <a href="index.html"><h1>Admin</h1></a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="education.html">education</a></li>
+        <li><a href="work.html">work</a></li>
+      </ul>
+
+      <div class="burgernav">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main>
+      <section id="content">
+        <div class="wrapper">
+          <div class="pageHeader">
+            <h2>Portfolio</h2>
+
+            <!--Form to add-->
+            <div class="flex">
+              <h3>Add:</h3>
+              <button id="addFormButton" title="Add" onclick="addForm()">
+                <img src="./pics/add.png" alt="Add" />
+              </button>
+            </div>
+          </div>
+
+          <div id="addForm">
+            <div class="formWrapper">
+              <form>
+                <h2>Portfolio</h2>
+                <label for="pfTitle">Title:</label><br />
+                <input type="text" id="pfTitle" name="pfTitle" />
+
+                <label for="link">Link:</label><br />
+                <input type="text" id="link" name="link" /><br />
+
+                <label for="desc">Description:</label><br />
+                <input type="text" id="desc" name="desc" />
+
+                <input
+                  type="submit"
+                  value="Add"
+                  id="addPortfolio"
+                  class="add"
+                />
+                <input
+                  type="submit"
+                  value="Close"
+                  id="closeAdd"
+                  class="closeButton"
+                  onclick="close()"
+                />
+              </form>
+            </div>
+          </div>
+
+          <!--Table-->
+          <table id="portfolio"></table>
+
+          <!--Update form-->
+          <div id="updateForm">
+            <div class="formWrapper">
+              <form id="update"></form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="logo">
+        <a href="index.html">
+          <img src="pics/devlielogo2.png" alt="Devlies logo." class="logoPic" />
+        </a>
+      </div>
+
+      <div>
+        <a href="#" class="logout">Log Out</a>
+      </div>
+
+      <p>Emelie Frendel © 2021</p>
+      <a href="../../CV/pub/index.html">CV</a>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+      let auth = new Auth();
+
+      document.querySelector(".logout").addEventListener("click", (e) => {
+        auth.logOut();
+      });
+    </script>
+  </body>
+</html>

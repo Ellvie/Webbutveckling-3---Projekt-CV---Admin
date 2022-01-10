@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/css/main.css" />
+    <link rel="shortcut icon" href="pics/devlielogo2.png" type="image/x-icon" />
+    <title>Admin</title>
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><img src="pics/devlielogo2.png" alt="Devlies logo." class="logoPic"
+        /></a>
+        <a href="index.html"><h1>Admin</h1></a>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">portfolio</a></li>
+        <li><a href="education.html">education</a></li>
+        <li><a href="work.html">work</a></li>
+      </ul>
+
+      <div class="burgernav">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </header>
+
+    <!--Main-->
+    <main>
+      <section id="content">
+        <div class="button">
+          <a href="portfolio.html">
+            <h2>Portfolio</h2>
+          </a>
+        </div>
+
+        <div class="button">
+          <a href="education.html">
+            <h2>Education</h2>
+          </a>
+        </div>
+
+        <div class="button">
+          <a href="work.html">
+            <h2>Work</h2>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!--Footer-->
+    <footer>
+      <div class="logo">
+        <a href="index.html">
+          <img src="pics/devlielogo2.png" alt="Devlies logo." class="logoPic" />
+        </a>
+      </div>
+
+      <div>
+        <a href="#" class="logout">Log Out</a>
+      </div>
+
+      <p>Emelie Frendel © 2021</p>
+      <a href="../../CV/pub/index.html">CV</a>
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script>
+      let auth = new Auth();
+
+      document.querySelector(".logout").addEventListener("click", (e) => {
+        auth.logOut();
+      });
+    </script>
+  </body>
+</html>
